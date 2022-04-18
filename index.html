@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="reset.css">
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Nanum+Brush+Script&display=swap" rel="stylesheet">
+    <title></title>
+</head>
+
+<body>
+    <article class="language">
+        <h1 class="blind">최애 프로그림언어 셀렉박스</h1>
+        <button onclick="" class="button-dropdown" type="button">최애 프로그래밍 언어</button>
+        <ul class="list-language">
+            <li><button type="button">Python</button></li>
+            <li><button type="button">Java</button></li>
+            <li><button type="button">JavaScript</button></li>
+            <li><button type="button">C#</button></li>
+            <li><button type="button">C/C++</button></li>
+        </ul>
+    </article>
+
+    <script src="//code.jquery.com/jquery-3.3.1.min.js"></script>
+    <script>
+        $(function() {
+            $('.list-language').hide();
+            $('.button-dropdown').click(
+                function () {
+                $('.list-language').toggle();
+                
+            })
+        });
+    </script>
+</body>
+
+</html>
