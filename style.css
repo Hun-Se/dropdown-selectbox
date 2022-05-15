@@ -33,7 +33,7 @@
     line-height: 16.42px;
 }
 
-.language .button-dropdown:focus {
+.language .clicked-border-style {
     background-image: url('images/icon-Triangle-up.png');
     border: 1px solid #9B51E0;
     box-shadow: 0 0 0 3px #F8E4FF;
@@ -74,4 +74,8 @@
 .language .list-language li button:hover
 ,.language .list-language li button:focus {
     background-color: #F8E4FF;
+}
+
+.list-language.hide {
+    display: none;
 }

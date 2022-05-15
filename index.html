@@ -17,24 +17,27 @@
     <article class="language">
         <h2 class="blind">최애 프로그림언어 셀렉박스</h2>
         <button class="button-dropdown text-ellipsis" type="button">최애 프로그래밍 언어</button>
-        <ul class="list-language">
-            <li><button type="button text-ellipsis">Python</button></li>
-            <li><button type="button text-ellipsis">Java</button></li>
-            <li><button type="button text-ellipsis">JavaScript</button></li>
-            <li><button type="button text-ellipsis">C#</button></li>
-            <li><button type="button text-ellipsis">C/C++</button></li>
+        <ul class="list-language hide">
+            <li><button class="button-language" type="button text-ellipsis">Python</button></li>
+            <li><button class="button-language" type="button text-ellipsis">Java</button></li>
+            <li><button class="button-language" type="button text-ellipsis">JavaScript</button></li>
+            <li><button class="button-language" type="button text-ellipsis">C#</button></li>
+            <li><button class="button-language" type="button text-ellipsis">C/C++</button></li>
         </ul>
     </article>
 
-    <script src="//code.jquery.com/jquery-3.3.1.min.js"></script>
     <script>
-        $(function() {
-            $('.list-language').hide();
-            $('.button-dropdown').click(
-                function () {
-                $('.list-language').toggle();
-                
-            })
+        const toggleBtn = document.querySelector(".button-dropdown");
+        const listLanguage = document.querySelector(".list-language");
+        const selectBtn = document.querySelectorAll(".button-language")
+        
+        toggleBtn.addEventListener('click', function () {
+            toggleBtn.classList.toggle("clicked-border-style");
+            listLanguage.classList.toggle("hide");
+        });
+        
+        selectBtn.forEach(element => {
+            
         });
     </script>
 </body>
