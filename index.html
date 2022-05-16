@@ -29,15 +29,18 @@
     <script>
         const toggleBtn = document.querySelector(".button-dropdown");
         const listLanguage = document.querySelector(".list-language");
-        const selectBtn = document.querySelectorAll(".button-language")
+        const selectBtn = document.querySelectorAll(".button-language");
         
         toggleBtn.addEventListener('click', function () {
-            toggleBtn.classList.toggle("clicked-border-style");
             listLanguage.classList.toggle("hide");
+            toggleBtn.classList.toggle("clicked-border-style");
         });
         
         selectBtn.forEach(element => {
-            
+            element.addEventListener('click', () => {
+                toggleBtn.textContent = element.textContent;
+                listLanguage.classList.toggle("hide");
+            });
         });
     </script>
 </body>
